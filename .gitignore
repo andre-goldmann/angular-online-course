@@ -41,11 +41,11 @@
 /node-backend/package-lock.json
 /node-backend/.env
 /node-backend/node_modules
+/node-backend/package-lock.json
 /app/.angular/
 /app/.idea/
 /app/.storybook/
 /app/.vscode/
 /app/dist/
 /app/node_modules/
-/node-backend/
 /app/.angular/
