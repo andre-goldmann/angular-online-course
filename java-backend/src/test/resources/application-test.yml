@@ -1,0 +1,14 @@
+server:
+  port: 5000
+  forward-headers-strategy: framework
+  servlet:
+    context-path: /resource-server
+
+
+logging:
+  level:
+    root: INFO
+    org:
+      hibernate:
+        SQL: DEBUG
+        type.descriptor.sql.BasicBinder: TRACE
