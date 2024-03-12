@@ -1,0 +1,51 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/app/dist
+/app/tmp
+/app/out-tsc
+/app/bazel-out
+
+# Node
+/app/node_modules
+/appnpm-debug.log
+/appyarn-error.log
+
+# IDEs and editors
+.idea/
+/app.idea/
+/app.project
+/app.classpath
+/app.c9/
+/app*.launch
+/app.settings/
+/app*.sublime-workspace
+
+
+# Miscellaneous
+/app/.angular/cache
+/app.sass-cache/
+/app/connect.lock
+/app/coverage
+/app/libpeerconnection.log
+/apptestem.log
+/app/typings
+/app/package-lock.json
+
+# System files
+/app.DS_Store
+/appThumbs.db
+
+/app/package-lock.json
+
+/node-backend/package-lock.json
+/node-backend/.env
+/node-backend/node_modules
+/app/.angular/
+/app/.idea/
+/app/.storybook/
+/app/.vscode/
+/app/dist/
+/app/node_modules/
+/node-backend/
+/app/.angular/
