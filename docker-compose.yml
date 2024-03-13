@@ -10,8 +10,9 @@ services:
       - .:/usr/app/
       - /usr/app/node_modules
     depends_on:
-      - nodebackend
-      - springbackend
+      - keycloak
+  #    - nodebackend
+  #    - springbackend
 
   nginx:
     container_name: middlenginx
@@ -28,54 +29,54 @@ services:
       - nodebackend
       - springbackend
 
-  nodebackend:
-    container_name: nodebackend
-    build:
-      context: ./node-backend
-      dockerfile: ./Dockerfile
-    volumes:
-      - .:/usr/app/
-      - /usr/app/node_modules
-    ports:
-      - "3000:3000"
-    expose:
-      - "3000"
-    depends_on:
-      - keycloak
+  #nodebackend:
+  #  container_name: nodebackend
+  #  build:
+  #    context: ./node-backend
+  #    dockerfile: ./Dockerfile
+  #  volumes:
+  #    - .:/usr/app/
+  #    - /usr/app/node_modules
+  #  ports:
+  #    - "3000:3000"
+  #  expose:
+  #    - "3000"
+  #  depends_on:
+  #    - keycloak
 
-  springbackend:
-    container_name: springbackend
-    restart: always
-    build:
-      context: ./java-backend
-      dockerfile: ./Dockerfile
+  #springbackend:
+  #  container_name: springbackend
+  #  restart: always
+  #  build:
+  #    context: ./java-backend
+  #    dockerfile: ./Dockerfile
     #volumes:
     #  - .:/usr/app/
     #  - /usr/app/node_modules
-    ports:
-      - "4000:4000"
-    expose:
-      - "4000"
-    depends_on:
-      - keycloak
+  #  ports:
+  #    - "4000:4000"
+  #  expose:
+  #    - "4000"
+  #  depends_on:
+  #    - keycloak
 
-  postgres:
-    image: postgres:14.1-alpine
-    restart: always
-    volumes:
-      - ./init-multi-postgres-databases.sh:/docker-entrypoint-initdb.d/init-multi-postgres-databases.sh
-    expose:
-      - "7432"
-    ports:
-      - '7432:7432'
-    env_file:
-      - ./database.dev.env
+  #postgres:
+  #  image: postgres:14.1-alpine
+  #  restart: always
+  #  volumes:
+  #    - ./init-multi-postgres-databases.sh:/docker-entrypoint-initdb.d/init-multi-postgres-databases.sh
+  #  expose:
+  #    - "7432"
+  #  ports:
+  #    - '7432:7432'
+  #  env_file:
+  #    - ./database.dev.env
     #healthcheck:
     #  test: [ "CMD-SHELL", "pg_isready -U postgres" ]
     #  interval: 5s
     #  timeout: 5s
     #  retries: 5
-    command: -p 7432
+  #  command: -p 7432
 
 #https://www.youtube.com/watch?v=_0oXZKr97ro
   keycloak:
