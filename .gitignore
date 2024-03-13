@@ -49,3 +49,9 @@
 /app/dist/
 /app/node_modules/
 /app/.angular/
+
+./database.dev.env
+./keycloak.dev.env
+./matomo.dev.env
+./keycloak.dev.env.postgres
+./db.env
