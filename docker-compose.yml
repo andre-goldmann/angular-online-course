@@ -9,8 +9,8 @@ services:
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
-    depends_on:
-      - keycloak
+  #  depends_on:
+  #    - keycloak
   #    - nodebackend
   #    - springbackend
 
